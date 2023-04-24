@@ -1,0 +1,11 @@
+.wedding-banner {
+    background: url('../images/wedding/wedding_tit_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 1000px) {
+    .wedding-banner {
+        background-size: cover;
+    }
+}

@@ -1,0 +1,11 @@
+.basket-banner {
+    background: url('../images/bakset/basket_tit_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 1000px) {
+    .basket-banner {
+        background-size: cover;
+    }
+}

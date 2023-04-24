@@ -1,0 +1,155 @@
+
+.main-section-container {
+    max-width: 830px;
+    height: 200vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: .35rem;
+    margin: auto;
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.grid-item__img {
+    background-color: #3f3e3e;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.wedding-bg {
+    background: url('../images/main/main_wedding.jpg');
+}
+
+.basket-bg {
+    background: url('../images/main/main_basket.jpg');
+}
+
+.bouquet-bg {
+    background: url('../images/main/main_boquet.jpg');
+}
+
+.class-bg {
+    background: url('../images/main/main_class.jpg');
+}
+
+.wedding-bg, .basket-bg, .bouquet-bg, .class-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-text {
+    text-align: center;
+}
+
+.img-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    /* filter: brightness(0.85); */
+}
+
+.btn-see-more {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+    background-color: #ffffff00;
+    padding: 10px 35px;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.btn-see-more:hover {
+    background-color: #F2D7A0;
+    color: rgb(56, 56, 56);
+    border: 1px solid #F2D7A0;
+    z-index: 100;
+}
+
+@media (min-width: 600px) {
+    .main-section-container {
+        max-width: 900px;
+        max-height: 85vh;
+        grid-gap: .2rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .main-section-container {
+        max-width: 1100px;
+        height: 76vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-gap: .15rem;
+    }
+
+    .wedding-grid {
+        grid-column: span 4;
+        grid-row: span 7;
+    }
+    
+    .basket-grid {
+        grid-column: span 2;
+        grid-row: span 6;
+    }
+    
+    .bouquet-grid {
+        grid-row: span 6;
+    }
+    
+    .class-grid {
+        grid-row: span 6;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .main-section-container {
+        max-width: 1400px;
+        height: 80vh;
+        /* grid-gap: .1rem; */
+    }
+
+    .wedding-grid {
+        grid-column: span 2;
+        grid-row: span 12;
+    }
+
+    .grid-item:hover .grid-item__img {
+    transform: scale(1.05);
+    filter: brightness(0.8) grayscale(0.2);
+    transition: transform 2000ms ease-in-out;
+    }
+    
+    .img-title {
+        filter: brightness(0.85);
+    }
+
+    .grid-item:hover .img-title {
+        filter: brightness(1);
+    }
+
+    .btn-see-more {
+        visibility: hidden;
+    }
+
+    .grid-item:hover .btn-see-more {
+        visibility: visible;
+    }
+    
+}

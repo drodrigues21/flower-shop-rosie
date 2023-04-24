@@ -1,0 +1,11 @@
+.bouquet-banner {
+    background: url('../images/bouquet/bouquet_tit_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 1000px) {
+    .bouquet-banner {
+        background-size: cover;
+    }
+}

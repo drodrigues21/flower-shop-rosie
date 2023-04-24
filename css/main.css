@@ -1,0 +1,339 @@
+/* 
+Fonts:
+
+font-family: 'Dawning of a New Day', cursive;
+font-family: 'Martel Sans', sans-serif;
+
+*/
+
+@font-face {
+    font-family: dreamLight;
+    src: url(../fonts/S-Core_Dream_OTF/SCDream3.otf);
+}
+
+@font-face {
+    font-family: dreamRegular ;
+    src: url(../fonts/S-Core_Dream_OTF/SCDream4.otf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+body { 
+    margin: 0;
+    padding: 0;
+    background-color: #F8F6F2;
+}
+
+header {
+    background-color: #F8F6F2;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* left: 0; */
+    /* right: 0; */
+    z-index: 1;
+}
+
+/* Navbar Section */
+
+.nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(230, 214, 209);
+    z-index: 100;
+    padding-top: 1.2em;
+    transform: translateX(-100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+}
+
+.nav__list--left {
+    margin-top: 4em;
+}
+
+.nav__item {
+    padding-bottom: 4em;
+}
+
+.nav__item a {
+   text-decoration: none;
+   color: rgb(104, 99, 99);
+   font-size: 1.4rem;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+.nav__item a:active,
+.nav__item a:hover {
+    color: #C5A76C;
+}
+
+.logo img {
+    width: 225px;
+    display: block;
+    max-width: 100%;
+}
+
+.mybag {
+    position: absolute;
+    right: 1em;
+    padding-bottom: 0;
+}
+
+.mybag a {
+    font-size: 21px;
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0.5em;
+    /* top: 2em; */
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: rgb(141, 141, 141);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+/* Banner Section */
+.banner-container {
+    background-color: #414141;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-info {
+    width: 80%;
+    min-width: 310px;
+    background-color: #FFFAEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25em;
+}
+
+.banner-info--title {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: .25em;
+}
+
+.banner-info--text {
+    font-family: 'Dawning of a New Day', cursive;
+    font-size: 21px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+}
+
+/* Footer Section */
+
+.footer-row {
+    background-color: #F8F6F2;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.social-media img{
+    width: 37px;
+    padding: 5px;
+}
+
+.social-media-icon img:active,
+.social-media-icon img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-container {
+    /* border: 3px solid red; */
+    padding: 5px 0;
+}
+
+.info-text {
+    margin: 0;
+    padding: 2px;
+    font-family: dreamLight, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.designed {
+    font-style: italic;
+}
+
+@media (min-width: 1000px) {
+
+    .nav {
+        max-width: 1400px;
+        position: relative;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        transform: translateX(0%);
+        padding: 0;
+        margin: 0;
+        transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center; 
+        width: 35%;
+    }
+
+    .nav__list--right {
+        margin-top: 4em;
+    }
+
+    .nav__item a {
+    color: rgb(22, 22, 22);
+    font-size: 20px;
+    }
+
+    .mybag {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .mybag a {
+        font-size: 23px;
+    }
+
+    .logo {
+        position: absolute;
+        left: calc(50% - 150px);
+        z-index: 1000;
+    }
+
+    .logo img {
+        width: 300px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* Banner Section */
+   
+
+    .banner-info {
+        background-color: #FFFAEF;
+        max-width: 750px;
+        /* height: 220px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 2em;
+    }
+
+    .banner-info--title {
+        font-family: 'Martel Sans', sans-serif;
+        font-size: 35px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .banner-info--text {
+        width: 600px;
+        font-family: 'Dawning of a New Day', cursive;
+        font-size: 26px;
+        text-align: center;
+        margin: 0;
+        padding-bottom: .5em;
+    }
+
+    /* Footer Section */
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1400px;
+        padding: 1em 0;
+        margin: 0 auto;
+    }
+    
+}

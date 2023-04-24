@@ -1,0 +1,118 @@
+/* Banner section */
+.about-me-banner {
+    background-color: #F8F6F2;
+}
+
+.about-me-banner--info {
+    text-align: center;
+    padding: 4em 2em 2em 2em;
+}
+ 
+.about-me__info--title {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 900; 
+    color: rgb(24, 24, 24);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.about-me__info--text {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+.dark-pink {
+    color: #E5979E;
+}
+
+.blue {
+    color: #A1C0DA;
+}
+
+.orange {
+    color: #F3BE79;
+}
+
+.red {
+    color: #E17A60;
+}
+
+.green {
+    color: #A7BCA9;
+}
+
+.light-pink {
+    color: #F1C6CD;
+}
+
+/* About me section */
+.about-me-container {
+    padding: 2em 1em;
+}
+
+.item-video-container {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.item-video-container video {
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-me {
+    text-align: center;
+}
+
+.about-me {
+    font-family: dreamLight, sans-serif;
+    font-size: 14px;
+}
+
+.top {
+    /* border: 1px solid red; */
+    margin-bottom: 3em;
+}
+
+@media (min-width: 1000px) {
+    /* Banner section */
+    .about-me__info--title {
+        font-size: 30px;
+        margin-top: 2em;
+    }
+
+    .about-me__info--text {
+        font-size: 80px;
+        letter-spacing: .3em;
+        line-height: 1.5;
+        margin: 0 0 1em 0;
+    }
+
+    /* About me section */
+    .item-video-container {
+        max-width: 1080px;
+        max-height: 562px;
+        /* display: flex; */
+        /* justify-content: center; */
+        margin: 10em auto;
+    }
+    
+    .item-video-container video {e;
+       width: 100%;
+       height: auto;
+       transform: scale(1.5);
+       object-fit: cover ;
+    }
+
+    .about-me {
+        font-size: 20px;
+    }
+
+    .bottom {
+        margin-bottom: 5em;
+    }
+}
